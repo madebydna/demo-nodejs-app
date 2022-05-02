@@ -26,13 +26,13 @@ Aplication will be deployed in AWS ECS.
 
 ## Pipeline Stages
 
-1. Tests
+1. Test repo by running `npm test` after installing dependencies
 
-2. Build an image
+2. Build an image with `docker.build` (using Docker Pipeline plugin syntax)
 
-3. Push the image to ECR
+3. Push the image to ECR with `docker.withRegistry` (using Docker Pipeline plugin syntax)
 
-4. Deploy the image
+4. Deploy the image with `withAWS` (using [Pipeline: AWS Steps](https://plugins.jenkins.io/pipeline-aws/#plugin-content-withaws) plugin)
 
 
 ## Notes
